@@ -1,0 +1,21 @@
+﻿@{
+    string path = Url.Content(LaptopWebSite.Core.Constants.ProductImagePath);
+}
+
+<h2>Завантаження фото!</h2>
+
+<div id="fileUploadContainer">
+
+</div>
+
+<div class="row">
+    <div id="listUploadImages">
+
+    </div>
+    <div class="col-md-2 plusupload" id="imageContainerPlus" data-counter="1">
+        <div class="thumbnail">
+            <img src="@(path+"_default.png")" class="uploadimage" alt="Lights" style="width:100%">
+        </div>
+    </div>
+
+</div>
