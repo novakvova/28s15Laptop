@@ -33,7 +33,7 @@ $(function () {
 
                 //var image = $(imageCurrent).find(".uploadimage")[0];
                 $.ajax({
-                    url: "/ProductImages/UploadBase64",
+                    url: "/TestCropper/UploadBase64",
                     type: "POST",
                     data: {
                         __RequestVerificationToken: token,
@@ -63,7 +63,7 @@ $(function () {
 
                 //var image = $(imageCurrent).find(".uploadimage")[0];
                 $.ajax({
-                    url: "/ProductImages/DeleteImageAjax",
+                    url: "/TestCropper/DeleteImageAjax",
                     type: "POST",
                     data: {
                         __RequestVerificationToken: token,
@@ -75,7 +75,6 @@ $(function () {
                                 .find("[data-id='" + id + "']").first();
                             divDelete.remove();
                         }
-
 
                     }
                 });
