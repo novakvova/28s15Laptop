@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div id="container">
+    <ul>
+        <li>
+            Root node
+            <ul>
+                <li>Child node 1</li>
+                <li>Child node 2</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+@section styles {
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/themes/default/style.min.css" />
+}
+
+@section scripts {
+<script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/jstree.min.js"></script>
+    <script>
+        $(function () {
+            $('#container').jstree();
+        });
+    </script>
+@*<script src="~/Scripts/tree-view/script.js"></script>*@
+}
