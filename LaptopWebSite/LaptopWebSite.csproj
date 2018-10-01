@@ -219,8 +219,13 @@
     <Compile Include="Migrations\201809241255594_Second.Designer.cs">
       <DependentUpon>201809241255594_Second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810011322199_Add tblCategories.cs" />
+    <Compile Include="Migrations\201810011322199_Add tblCategories.Designer.cs">
+      <DependentUpon>201810011322199_Add tblCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Entities\Category.cs" />
     <Compile Include="Models\Entities\Product.cs" />
     <Compile Include="Models\Entities\ProductDescriptionImage.cs" />
     <Compile Include="Models\HealperModels.cs" />
@@ -463,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809241255594_Second.resx">
       <DependentUpon>201809241255594_Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810011322199_Add tblCategories.resx">
+      <DependentUpon>201810011322199_Add tblCategories.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
