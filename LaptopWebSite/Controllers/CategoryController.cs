@@ -1,4 +1,5 @@
 ﻿using LaptopWebSite.Models;
+using LaptopWebSite.Models.Entities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -51,6 +52,21 @@ namespace LaptopWebSite.Controllers
                     children = c.Children.Count() != 0
                 }).ToList();
             string json = JsonConvert.SerializeObject(categories);
+
+            return Content(json, "application/json");
+        }
+        [HttpGet]
+        public ContentResult CreateCategory(string name, int? parentId)
+        {
+            var category = new Category
+            {
+                ParentId=parentId,
+                Name = name
+            };
+            _context.Categories.Add(category);
+            _context.SaveChanges();
+                
+            string json = JsonConvert.SerializeObject(category.Id);
 
             return Content(json, "application/json");
         }
