@@ -19,5 +19,6 @@ namespace LaptopWebSite.Models.Entities
         [ForeignKey("CategoryOf")]
         public int ? ParentId { get; set; }
         public Category CategoryOf { get; set; }
+        public virtual ICollection<Category> Children { get; set; }
     }
 }

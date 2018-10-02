@@ -5,7 +5,7 @@
 
 <h2>Index</h2>
 
-<div id="container">
+@*<div id="container">
     <ul>
         <li>
             Root node
@@ -15,19 +15,41 @@
             </ul>
         </li>
     </ul>
-</div>
+</div>*@
 
+
+<div id="tree"></div>
 
 @section styles {
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/themes/default/style.min.css" />
+
+    <link href="~/Content/themes/default/style.css" rel="stylesheet" />
 }
 
 @section scripts {
-<script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/jstree.min.js"></script>
+    <script src="~/Scripts/jstree.js"></script>
     <script>
+        //$(function () {
+        //    $('#container').jstree();
+        //});
         $(function () {
-            $('#container').jstree();
+            $('#tree').jstree({
+                'core': {
+                    'data': {
+                        'url': function (node) {
+                            return node.id === '#' ?
+                                '/Category/GetParentCategories' :
+                                '/Category/GetChildrenCategories';
+                        },
+                        'data': function (node) {
+                            return { 'id': node.id };
+                        }
+                    }
+                }
+            });
+            $('#tree').on("changed.jstree", function (e, data) {
+                console.log(data.selected);
+            });
+
         });
     </script>
-@*<script src="~/Scripts/tree-view/script.js"></script>*@
 }
