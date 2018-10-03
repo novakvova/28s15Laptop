@@ -40,14 +40,14 @@
                     'check_callback': true
                 }
             });
-            $('#tree').on('create_node.jstree', function (e, data) {
-                console.log(data.node.parent);
+            //$('#tree').on('create_node.jstree', function (e, data) {
+            //    console.log(data.node.parent);
                 
-            });
+            //});
             $('#tree').on("changed.jstree", function (e, data) {
                 parentId = data.selected[0];
                 //console.log(data);
-                //console.log(data.selected[0]);
+                console.log(parentId);
             });
             
             $("#btnAddNode").on("click", function () {
@@ -59,7 +59,7 @@
                         'parentId': parentId
                     })
                     .done(function (d) {
-                        var id = d.id;
+                        var id = d;
                         var parent = '#';
                         if (parentId)
                             parent = parentId;
