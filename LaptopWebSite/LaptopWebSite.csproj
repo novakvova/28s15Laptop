@@ -224,14 +224,24 @@
     <Compile Include="Migrations\201810011322199_Add tblCategories.Designer.cs">
       <DependentUpon>201810011322199_Add tblCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810031417326_Add tbl filter.cs" />
+    <Compile Include="Migrations\201810031417326_Add tbl filter.Designer.cs">
+      <DependentUpon>201810031417326_Add tbl filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810031433145_Add view vFilterNameGroups.cs" />
+    <Compile Include="Migrations\201810031433145_Add view vFilterNameGroups.Designer.cs">
+      <DependentUpon>201810031433145_Add view vFilterNameGroups.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entities\Category.cs" />
     <Compile Include="Models\Entities\Filter.cs" />
     <Compile Include="Models\Entities\FilterName.cs" />
+    <Compile Include="Models\Entities\FilterNameGroup.cs" />
     <Compile Include="Models\Entities\FilterValue.cs" />
     <Compile Include="Models\Entities\Product.cs" />
     <Compile Include="Models\Entities\ProductDescriptionImage.cs" />
+    <Compile Include="Models\Entities\Views\VFilterNameGroup.cs" />
     <Compile Include="Models\HealperModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -265,6 +275,9 @@
     <Content Include="Images\Product\avatar.png" />
     <Content Include="Images\Product\Description\0c254532-4eff-4f01-865f-bb3c096c6a9d.jpg" />
     <Content Include="Images\Product\_default.png" />
+    <Content Include="Models\Entities\SqlView\vFilterNameGroups.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -492,6 +505,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810011322199_Add tblCategories.resx">
       <DependentUpon>201810011322199_Add tblCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810031417326_Add tbl filter.resx">
+      <DependentUpon>201810031417326_Add tbl filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810031433145_Add view vFilterNameGroups.resx">
+      <DependentUpon>201810031433145_Add view vFilterNameGroups.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

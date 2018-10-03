@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
 using LaptopWebSite.Models.Entities;
+using LaptopWebSite.Models.Entities.Views;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -34,5 +35,11 @@ namespace LaptopWebSite.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ProductDescriptionImage> ProductDescriptionImages { get; set; }
+
+        public DbSet<FilterName> FilterNames { get; set; }
+        public DbSet<FilterValue> FilterValues { get; set; }
+        public DbSet<FilterNameGroup> FilterNameGroups { get; set; }
+        public DbSet<VFilterNameGroup> VFilterNameGroups { get; set; }
+        public DbSet<Filter> Filters { get; set; }
     }
 }

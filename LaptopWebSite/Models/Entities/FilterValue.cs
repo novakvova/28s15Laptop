@@ -16,7 +16,7 @@ namespace LaptopWebSite.Models.Entities
         [Required, StringLength(maximumLength: 250)]
         public string Name { get; set; }
 
-        //public ICollection<Filter> Filtres { get; set; }
+        public virtual ICollection<Filter> Filtres { get; set; }
 
     }
 }
