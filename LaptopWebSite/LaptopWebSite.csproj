@@ -239,14 +239,17 @@
     <Compile Include="Models\Entities\FilterName.cs" />
     <Compile Include="Models\Entities\FilterNameGroup.cs" />
     <Compile Include="Models\Entities\FilterValue.cs" />
+    <Compile Include="Models\Entities\PredicatBuilder.cs" />
     <Compile Include="Models\Entities\Product.cs" />
     <Compile Include="Models\Entities\ProductDescriptionImage.cs" />
     <Compile Include="Models\Entities\Views\VFilterNameGroup.cs" />
+    <Compile Include="ViewModels\FValueViewModels.cs" />
     <Compile Include="Models\HealperModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\HomeViewModels.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -447,7 +450,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -476,6 +479,7 @@
     <Content Include="Views\TestCropper\_AddImages.cshtml" />
     <Content Include="Views\TestCropper\_ImageCropper.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Home\_Filter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

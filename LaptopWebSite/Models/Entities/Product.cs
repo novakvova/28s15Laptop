@@ -24,6 +24,7 @@ namespace LaptopWebSite.Models.Entities
         public int Count { get; set; }
         public bool IsAvailable { get; set; }
         public virtual ICollection<ProductDescriptionImage> ProductDescriptionImage { get; set; }
+        public virtual ICollection<Filter> Filtres { get; set; }
 
     }
 }

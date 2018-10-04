@@ -11,17 +11,17 @@ namespace LaptopWebSite
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            GlobalConfiguration.Configuration
-                .UseSqlServerStorage("DefaultConnection");
-            ProductController obj = new ProductController();
-            app.UseHangfireDashboard("/myJobDashbord", new DashboardOptions()
-            {
-                Authorization = new [] {new HangfireAuthorizationFilter()}
-            });
-            RecurringJob.AddOrUpdate(
-                    () => obj.ClearImage(),Cron.Minutely() // Cron.Daily(3,0)
-                );
-            app.UseHangfireServer();
+            //GlobalConfiguration.Configuration
+            //    .UseSqlServerStorage("DefaultConnection");
+            //ProductController obj = new ProductController();
+            //app.UseHangfireDashboard("/myJobDashbord", new DashboardOptions()
+            //{
+            //    Authorization = new [] {new HangfireAuthorizationFilter()}
+            //});
+            //RecurringJob.AddOrUpdate(
+            //        () => obj.ClearImage(),Cron.Minutely() // Cron.Daily(3,0)
+            //    );
+            //app.UseHangfireServer();
         }
     }
 }
